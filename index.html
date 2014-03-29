@@ -3,6 +3,17 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Управляющая компания "ВолгаБытСервис" - сайт в разработке</title>
+    <script type="text/javascript" src="/scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#docs-content").hide();
+            $("#docs-header").click(function () {
+                $(this).next("#docs-content").slideToggle(300);
+                $(this).next("#docs-content").css({'border-left': '1px solid #b5b5b5'});
+            });
+        });
+    </script>
+
     <style type="text/css">
         .content-wrapper {
             width: 100%;
@@ -12,10 +23,9 @@
         .header-img {
             position: relative;
             display: inline-block;
-            /*width: 100%;*/
         }
 
-        h1 {
+        .header-img h1 {
             font-family: Arial, sans-serif;
             font-size: 40px;
             position: absolute;
@@ -24,42 +34,58 @@
             width: 100%;
         }
 
-        .docs-wrapper {
-            display: block;
-        }
-
         .footer {
             font-family: Arial, sans-serif;
             font-size: 10px;
             color: gray;
+            background-color: white;
             width: 100%;
             height: 15px;
-            position: absolute;
             bottom: 0;
             left: 0;
+            position: fixed;
+            clear: both;
         }
 
         .footer a {
             color: gray;
         }
 
+        #docs-header {
+            cursor: pointer;
+        }
+
+        #docs-header:after {
+            content: url(/img/unfold.gif);
+        }
+
+        .docs-wrapper h1 {
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+        }
+
     </style>
 </head>
 <body>
 <div class="content-wrapper">
-    <div class="content-widther">
-        <div class="header-img">
-            <img src="img/header_wide.png">
+    <div class="header-img">
+        <img src="img/header_wide.png">
 
-            <h1><span>САЙТ НАХОДИТСЯ В РАЗРАБОТКЕ</span></h1>
+        <h1><span>САЙТ НАХОДИТСЯ В РАЗРАБОТКЕ</span></h1>
+    </div>
+    <div class="docs-wrapper">
+        <div id="docs-header">
+            Документы
         </div>
-        <div class="docs-wrapper">
+        <div id="docs-content">
+            Документов пока нет
         </div>
+    </div>
 
-        <div class="footer">
-            Hosted on <a href="http://pages.github.com">GitHub Pages</a> - developed by <a
-                href="mailto:machtigmann@yandex.ru">machtigmann@yandex.ru</a>
-        </div>
+    <div class="footer">
+        2014 - &copy; ООО УК Волгабытсервис - Hosted on <a href="http://pages.github.com">GitHub Pages</a> -
+        Developed by <a
+            href="mailto:machtigmann@yandex.ru">machtigmann@yandex.ru</a>
     </div>
 </div>
 </body>
