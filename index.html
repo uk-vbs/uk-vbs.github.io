@@ -3,68 +3,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Управляющая компания "ВолгаБытСервис" - сайт в разработке</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <script type="text/javascript" src="/scripts/jquery-1.11.0.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#docs-content").hide();
-            $("#docs-header").click(function () {
-                $(this).next("#docs-content").slideToggle(300);
-                $(this).next("#docs-content").css({'border-left': '1px solid #b5b5b5'});
+            $(".docs-content").hide();
+            $(".docs-header").click(function () {
+                $(this).next(".docs-content").slideToggle(300);
             });
         });
     </script>
-
-    <style type="text/css">
-        .content-wrapper {
-            width: 100%;
-            text-align: center;
-        }
-
-        .header-img {
-            position: relative;
-            display: inline-block;
-        }
-
-        .header-img h1 {
-            font-family: Arial, sans-serif;
-            font-size: 40px;
-            position: absolute;
-            top: -5px;
-            left: 0;
-            width: 100%;
-        }
-
-        .footer {
-            font-family: Arial, sans-serif;
-            font-size: 10px;
-            color: gray;
-            background-color: white;
-            width: 100%;
-            height: 15px;
-            bottom: 0;
-            left: 0;
-            position: fixed;
-            clear: both;
-        }
-
-        .footer a {
-            color: gray;
-        }
-
-        #docs-header {
-            cursor: pointer;
-        }
-
-        #docs-header:after {
-            content: url(/img/unfold.gif);
-        }
-
-        .docs-wrapper h1 {
-            font-family: Arial, sans-serif;
-            font-size: 40px;
-        }
-
-    </style>
 </head>
 <body>
 <div class="content-wrapper">
@@ -73,19 +21,43 @@
 
         <h1><span>САЙТ НАХОДИТСЯ В РАЗРАБОТКЕ</span></h1>
     </div>
-    <div class="docs-wrapper">
-        <div id="docs-header">
-            Документы
+    <div class="center">
+        <div class="docs-wrapper">
+            <div class="docs-header">
+                ДОКУМЕНТЫ
+            </div>
+            <div class="docs-content">
+                <div class="docs">
+                    Документов пока нет
+                </div>
+            </div>
         </div>
-        <div id="docs-content">
-            Документов пока нет
+        <div class="contacts">
+            <div class="contacts-header">
+                <span>КОНТАКТЫ</span>
+            </div>
+            <div class="contacts-content">
+                <span>ООО УК "Волгабытсервис"</span>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>Адрес:</td>
+                        <td>443022, г. Самара, Заводское шоссе, д. 14, литера 1, комната 124</td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>Телефон:</td>
+                        <td>313-80-01</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
     <div class="footer">
-        2014 - &copy; ООО УК Волгабытсервис - Hosted on <a href="http://pages.github.com">GitHub Pages</a> -
-        Developed by <a
-            href="mailto:machtigmann@yandex.ru">machtigmann@yandex.ru</a>
+        2014 - &copy; ООО УК Волгабытсервис - Hosted on <a href="http://pages.github.com">GitHub Pages</a>
+        <!--- Developed by <a href="mailto:machtigmann@yandex.ru">machtigmann@yandex.ru</a>-->
     </div>
 </div>
 </body>
