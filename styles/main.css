@@ -6,6 +6,11 @@
 .header-img {
     position: relative;
     display: inline-block;
+    min-height: 200px;
+    min-width: 800px;
+    background: url(/img/header_wide.png) no-repeat;
+    width: 80%;
+    background-size: 100% auto;
 }
 
 .header-img h1 {
@@ -45,19 +50,20 @@
 .docs {
     margin: 15px auto;
     padding: 10px 10px;
-    width: 900px;
     text-align: left;
     background-color: ghostwhite;
 }
 
 .center {
-    width: 1600px;
+    min-width: 800px;
+    width: 80%;
     margin: 0 auto;
     text-align: left;
 }
 
 .docs-wrapper {
-    width: 1000px;
+    min-width: 400px;
+    width: 55%;
     display: inline;
     float: left;
     margin-top: 20px;
@@ -66,7 +72,8 @@
 }
 
 .contacts {
-    width: 400px;
+    width: 40%;
+    max-width: 400px;
     display: inline;
     float: right;
     font-family: Arial, Helvetica, sans-serif;
